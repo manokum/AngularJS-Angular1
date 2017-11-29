@@ -7,7 +7,11 @@
 	<script src="apps.js"></script>
 </head>
 <body ng-controller="MainController">
-	<p>Test Anguar</p>
-	{{test}}
+	<p>List of Animals Breed
+		
+	</p>
+	<table>
+	<tr ng-repeat="animal in test1"><td>{{animal}}</td></tr>
+	</table>
 </body>
 </html>
