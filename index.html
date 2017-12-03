@@ -1,3 +1,11 @@
+<!--
+1 . Bootstraping of Angular JS application 
+2 . What is digest loop in Angular JS
+3 . 
+
+
+-->
+
 <!DOCTYPE html>
 <html ng-app="app">
 <head>
@@ -5,13 +13,14 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.4/angular.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.4/angular-route.min.js"></script>
 	<script src="apps.js"></script>
+	<script src="services.js"></script>
+	<script src="controller.js"></script>
 </head>
 <body ng-controller="MainController">
 	<p>List of Animals Breed
-		
 	</p>
 	<table>
-	<tr ng-repeat="animal in test1"><td>{{animal}}</td></tr>
+		<tr ng-repeat="animal in test1"><td>{{animal}}</td></tr>
 	</table>
 </body>
 </html>
