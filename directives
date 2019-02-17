@@ -1,0 +1,40 @@
+<!--Directives in Angular JS : 
+ Latest updates about directivesand there usage and implementations .
+ https://github.com/joeeames/AngularJSDirectivesFundamentals/wiki -->
+
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<script type="text/javascript" src="angular.min.js"></script>
+		<script type="text/javascript" src="index.js"></script>
+	</head>
+	<body ng-controller="myCtrl">
+		<p>First Angular Directive in action</p>
+		<first-directive></first-directive>
+	</body>
+</html>
+
+-------------------------------------------------------------------------------------------------------------------------
+/* Initialization of the application*/
+angular.module("app",[]);
+/*Setting up the controller for the angular */
+angular.module("app").controller("myCtrl",function($scope){
+	$scope.user = {
+		name : "Mano" ,
+		address : {
+			street : "#41/2",
+			city: "Bangalore",
+			state : "Karnataka"
+		},
+		friends : ["Mano","Kumar","Ranjan"]
+	}
+});
+/*Setting up the active directive for the application*/
+angular.module("app").directive("firstDirective",function(){
+  return {
+    template : "First Directive Name : {{user.name}} </br>  Address : {{user.address.street}} </br> <div ng-repeat = 'friend in user.friends'> {{friend}} </div>",
+    // if the length of the template is being increased then we can add up the tempalateUrl to redirect it to the next page 
+    // templateUrl : "inobundorder.html"
+    restrict : "E" 
+  }
+})
